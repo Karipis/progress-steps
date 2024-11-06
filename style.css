@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2b2b2b;
+    font-family: 'Roboto';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    gap: 30px;
+
+
+}
+
+#steps {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 65px;
+
+}
+
+.step {
+    background: #2b2b2b;
+    color: #adadad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #adadad;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    transition: all 0.8s ease;
+}
+
+.step.done {
+    border-color: #2788D6;
+}
+
+#progressBar{
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+    height: 2px;
+    left: 0;
+    background-color: #adadad;
+}
+
+#activeProgressBar{
+    position: absolute;
+    width: 0%;
+    left: 0;
+    z-index: -1;
+    height: 2px;
+    background-color: #2788D6;
+    transition: all 0.8s ease;
+}
+
+
+button {
+    background: #adadad;
+    border: none;
+    color: white;
+    margin: 5px;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#previous{
+    cursor: not-allowed;
+}
+
+#next {
+    background: #2788D6;
+}
